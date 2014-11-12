@@ -1,0 +1,968 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* --------------------------------------------------
+
+    Custom styles for proposal websites
+
+    -------------------------------------------------
+    Table of Contents
+    -------------------------------------------------
+
+	:: Visual Styling
+		- Backgrounds
+		- Tables
+		- Tabs
+	:: Layout Styling
+		- Navigation
+		> Layout Responsive
+	:: Introduction Page
+	:: Solution Page
+	:: Dev & Deploy Page
+	:: Advertising Page
+	:: Financials Page
+	:: Timeline Page
+	
+
+
+-------------------------------------------------- */
+
+
+[data-magellan-expedition] {
+    padding: 0;
+    background: rgba(255, 255, 255, .9);
+}
+
+[data-magellan-destination].section-title{
+    border-top: none;
+}
+
+.orbit-bullets-container .orbit-bullets li{
+    background: none;
+	border: solid 3px #27c4f4;
+}
+
+.orbit-bullets-container .orbit-bullets li{
+    width: 2rem;
+	height: 2rem;
+}
+
+.orbit-bullets-container .orbit-bullets li.active{
+    background: #27c4f4;
+}
+
+/* -----------------------------------------
+   Content Orbit
+----------------------------------------- */
+.orbit-content .orbit-timer,
+.orbit-content .orbit-slide-number{
+	display: none;
+}
+
+.orbit-content .orbit-bullets-container{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 1rem;
+}
+
+.orbit-content .orbit-container .orbit-prev,
+.orbit-content .orbit-container .orbit-next {
+	width: 3rem;
+	height: 3rem;
+	background: rgba(255, 255, 255, .75);
+	border: solid 3px #fff;
+	border-radius: 2rem;
+}
+
+.orbit-content .orbit-container .orbit-prev:hover,
+.orbit-content .orbit-container .orbit-next:hover {
+	border-color: #27c4f4;
+}
+
+.orbit-content .orbit-container .orbit-prev{
+	left: 10%;
+}
+	
+.orbit-content .orbit-container .orbit-next {
+	right: 10%;
+}
+
+.orbit-content .orbit-container .orbit-prev > span{
+    left: 5px;
+}
+
+.orbit-content .orbit-container .orbit-slides-container > * {
+    left: 20%;
+    width: 60%;
+}
+
+.orbit-content .orbit-container .orbit-slides-container > * p{
+	font-size: 1rem;
+}
+
+
+/* -----------------------------------------
+   Visual Styling
+----------------------------------------- */
+h2{
+    margin-bottom: 2rem;
+}
+
+h2.center{
+    text-align: center;
+}
+
+ul{font-size: 1rem;}
+
+.emphasis{
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+	color: #27c4f4;
+}
+
+.caps{
+    font-size: .9em;
+    text-transform: uppercase;
+}
+
+.panel .normalize{
+    font-family: "Enriqueta", serif;
+}
+
+/*-------------Backgrounds-------------*/
+.bg-laptop{
+    background: #27c4f4 url('../images/bg-header-work-laptop1-50-blue.png') no-repeat center;
+    background-size: cover;
+}
+
+.bg-keyboard{
+    background-image: url('../images/bg-header-tech1-25-blue.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-purchase{
+    background-image: url('../images/bg-header-kiosk-purchase1-50-blue.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/*-------------Tables-------------*/
+table{
+    background: none;
+    border: none;
+}
+
+table thead,
+table tfoot,
+table tr:nth-of-type(even){
+    background: none;
+}
+
+/*-------------Tabs-------------*/
+.tabs dd:not(.active) > a{
+    background: none;
+}
+
+.tabs dd > a:hover{
+    color: #333;
+}
+
+.bg-ltyellow .tabs-content,
+.bg-ltyellow .tabs,
+.bg-ltyellow .tabs dd a{
+    border-color: #fcb725 !important;
+}
+
+.bg-ltyellow .tabs dd:not(.active) > a:hover {
+    background: #ffcc09;
+}
+
+.bg-ltgreen .tabs-content,
+.bg-ltgreen .tabs,
+.bg-ltgreen .tabs dd a{
+    border-color: #80b543 !important;
+}
+
+.bg-ltgreen .tabs dd:not(.active) > a:hover {
+    background: #95c83f;
+}
+
+.bg-ltblue .tabs-content,
+.bg-ltblue .tabs,
+.bg-ltblue .tabs dd a{
+    border-color: #2399d3 !important;
+}
+
+.bg-ltblue .tabs dd:not(.active) > a:hover {
+    background: #27c4f4;
+}
+
+.bg-ltred .tabs-content,
+.bg-ltred .tabs,
+.bg-ltred .tabs dd a{
+    border-color: #ca1f23 !important;
+}
+
+.bg-ltred .tabs dd:not(.active) > a:hover {
+    background: #ed1c24;
+}
+
+.tabs-content{
+    min-height: 30rem;
+    max-height: 45rem;
+}
+
+.tabs-content > .content{
+	height: 100%;
+    max-height: 42rem;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 1600px){}
+
+@media only screen and (max-width: 1024px){
+	h1 {
+		font-size: 2rem;
+	}
+	
+	h2{
+		font-size: 1.75rem;
+		text-align: center;
+	}
+	
+	h3 {
+		font-size: 1.425rem;
+	}
+	
+	h4{
+		font-size: 1.25rem;
+	}
+	
+	h4.small{
+		font-size: 1rem;
+	}
+	
+	p, p.panel, .panel p, .panel ul{
+		font-size: .9rem;
+	}
+	
+	.tabs-content{
+        min-height: 20rem;
+		max-height: 28rem;
+	}
+
+    .tabs-content > .content{
+        max-height: 25rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .tabs-content{
+        min-height: 30rem;
+        max-height: 42rem;
+    }
+
+    .tabs-content > .content{
+        max-height: 39rem;
+    }
+}
+
+
+/* -----------------------------------------
+   Layout Styling
+----------------------------------------- */
+#logo-fixed{
+    position: fixed;
+    left: 4rem;
+    bottom: 4rem;
+    width: 12rem;
+    z-index: 10;
+}
+
+#copyright{
+    position: fixed;
+    bottom: 1.5rem;
+    left: 4rem;
+    z-index: 10;
+    font-size: .8rem;
+}
+
+.intro .logo{
+    display: none;
+}
+
+.advance{
+    position: absolute;
+    bottom: 50%;
+    right: 3rem;
+    margin-bottom: -45px;
+}
+
+.advance h2{
+	display: inline;
+	margin-right: 1rem;
+	font-size: .85rem;
+}
+
+.advance a{
+	padding: 2rem 1.9rem;
+    background: #fff;
+    border-radius: 60px;
+    border: solid 3px #27c4f4;
+    color: #27c4f4;
+}
+
+#header{
+    padding: 0 1rem 8rem 1rem;
+    background-image: url('../images/bg-header-kiosk-listing1-50-red.png');
+    background-repeat: no-repeat;
+    background-position: -20% center;
+    background-size: 60%;
+    text-align: center;
+}
+
+#header [data-magellan-destination]#top{
+    padding-top: 8rem;
+}
+
+/*-------------Navigation-------------*/
+.intro [data-magellan-expedition]:not(.fixed) .sub-nav dd{
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 .5rem 0;
+}
+
+.intro [data-magellan-expedition]:not(.fixed) .sub-nav dd a{
+    display: inherit;
+    width: 100%;
+    padding: .5rem 1rem;
+    background: #27c4f4;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.intro [data-magellan-expedition]:not(.fixed) .sub-nav dd:first-child{
+    display: none;
+}
+
+#table-of-contents{
+    position: absolute;
+    width: 16rem;
+    left: 2rem;
+    padding-top: 4.5rem;
+    text-align: center;
+}
+
+.intro #overview{
+    padding-top: 1.5rem;
+}
+
+.intro .sidebar-right{
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.intro .sidebar-right .section-title{
+    border-top: none;
+}
+
+.intro,
+.main-content {
+    position: relative;
+}
+
+.main-content [data-magellan-destination]{
+    padding-top: 7rem;
+}
+
+#sub-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 13rem;
+    padding-top: 2rem;
+    background: #fff;
+    border-top: solid 1px #ececec;
+}
+
+#disclaimer{
+    float: right;
+    clear: none;
+    text-align: right;
+}
+
+#disclaimer img{
+    max-width: 200px;
+    max-height: 130px;
+    padding: 0 0 1rem 1rem;
+}
+
+/*-------------Layout Responsive-------------*/
+@media only screen and (width: 1920px){
+    .intro,
+    .main-content{
+        height: 1080px;
+    }
+}
+
+@media only screen and (max-width: 1920px){
+    .intro,
+    .main-content{
+        min-height: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    #logo-fixed{
+        display: none;
+    }
+
+    #table-of-contents{
+        display: none;
+    }
+
+    .intro .logo {
+        display: inline;
+        position: relative;
+        top: -1.5rem;
+        margin: 0 25%;
+        width: 50%;
+    }
+
+    .advance{
+        bottom: 6rem;
+        right: 1rem;
+    }
+
+    .main-content [data-magellan-destination]{
+        padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+	#header{
+		background-size: 100%;
+		background-position: center;
+	}
+
+    .advance a{
+        padding: 1.5rem;
+    }
+
+    .intro,
+    .main-content{
+        min-height: 800px;
+    }
+}
+
+@media only screen and (width: 1280px){
+    .intro,
+    .main-content{
+        height: 800px;
+    }
+}
+
+@media only screen and (width: 1024px){
+    .intro,
+    .main-content{
+        height: 768px;
+    }
+
+    .intro .row{
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+	.row{
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	
+	#header {
+		padding-bottom: 4rem;
+		background-size: cover;
+	}
+		
+	#header [data-magellan-destination]#top{
+		padding-top: 4rem;
+	}
+	
+	.intro,
+    .main-content{
+        min-height: 700px;
+    }
+	
+	.intro p{font-size: 1rem;}
+	
+	#sub-footer{
+		padding-bottom: 2rem;
+	}
+}
+
+@media only screen and (width: 768px){
+    .intro,
+    .main-content{
+        height: 1024px;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .logo {
+        margin: 0 35%;
+        width: 30%;
+    }
+
+	#header {
+		padding: 0 1rem 3rem 1rem;
+	}
+		
+	#header [data-magellan-destination]#top{
+		padding-top: 3rem;
+	}
+	
+	.intro .sidebar-right {
+		padding-top: 0rem;
+	}
+	
+	.intro .sidebar-right .section-title {
+		border-top: solid 1px #ececec;
+	}
+	
+	.sub-content {
+		padding: 2rem 0;
+	}
+}
+
+@media only screen and (max-width: 640px){
+    .intro,
+    .main-content{
+        min-height: 0;
+    }
+}
+
+
+/* -----------------------------------------
+   Introduction Page
+----------------------------------------- */
+#solution-features .orbit-content .orbit-container .orbit-slides-container > * {
+	text-align: center;
+}
+
+#solution-features .orbit-container .orbit-prev > span {
+    border-right-color: #27c4f4;
+}
+
+#solution-features .orbit-container .orbit-next > span {
+    border-left-color: #27c4f4;
+}
+
+#solution-features .orbit-bullets li{
+	background: #27c4f4;
+    background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem 1rem 1rem;
+    opacity: .6;
+}
+
+#solution-features .orbit-bullets li.active{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: .25rem;
+    opacity: 1;
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="0"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-right-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="1"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-interactive-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="2"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-pos-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="3"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-dynamic-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="4"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-analytics-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="5"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-mgmtdash-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="6"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-customize-white.png');
+}
+
+#solution-features .orbit-bullets li[data-orbit-slide="7"]{
+    background-image: url('http://www.citycorridor.com/shared/images/icons/CityCorridor-icons-support-white.png');
+}
+
+/*-------------Introduction Page Responsive-------------*/
+@media only screen and (max-width: 1024px){
+
+}
+
+
+/* -----------------------------------------
+   Solution Page
+----------------------------------------- */
+#solution{
+    background-image: url('../images/bg-city.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#solution .panel{
+    padding: 2rem;
+}
+
+#solution .panel ul{
+    list-style: disc;
+    list-style-position: inside;
+}
+
+#solution-content .tile{
+	position: relative;
+    border: solid 2px #fff;
+}
+
+#solution-content .tile label{
+    position: absolute;
+	top: 0;
+	width: 100%;
+    padding: .75rem 8px;
+	background: rgba(255, 255, 255, .85);
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    color: #1362a5;
+}
+
+#solution .advance h2 {
+    color: #fff;
+}
+
+/*-------------Solution Page Responsive-------------*/
+@media only screen and (max-width: 1024px){
+
+}
+
+
+/* -----------------------------------------
+   Dev & Deploy Page
+----------------------------------------- */
+#devdeploy{
+    background-image: url('../images/onkiosk-angled1.png');
+    background-size: 1200px;
+    background-position: 142% -140px;
+    background-repeat: no-repeat;
+}
+
+#devdeploy li{
+    padding-bottom: 0;
+}
+
+#devdeploy li h4{
+    height: 62px;
+    padding-bottom: 1rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#devdeploy .advance h2 {
+    color: #fff;
+}
+
+/*-------------Dev & Deploy Page Responsive-------------*/
+@media only screen and (max-width: 1600px){
+    #devdeploy{
+        background-position: 214% -140px;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    #devdeploy{
+        background-size: 900px;
+        background-position: 163% -30px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+	#devdeploy{
+		background-size: 650px;
+		background-position: 550px -40px;
+	}
+
+	/*#devdeploy li .panel h4 {
+		height: 42px;
+		padding-bottom: .5rem;
+	}
+	
+	#devdeploy .panel p{
+		font-size: .8rem;
+	}*/
+	
+	#devdeploy .orbit-content .panel {
+		padding: 3rem;
+	}
+	
+	#devdeploy .orbit-content .orbit-bullets-container {
+		bottom: 1rem;
+	}
+	
+	#devdeploy .orbit-container .orbit-prev,
+	#devdeploy .orbit-container .orbit-next {
+		top: 92%;
+		z-index: 20;
+		border: none;
+	}
+	
+	#devdeploy .orbit-container .orbit-prev:hover,
+	#devdeploy .orbit-container .orbit-next:hover {
+		background: #27c4f4;
+		border: none;
+	}
+	
+	#devdeploy .orbit-container .orbit-prev{
+		left: 30%;
+	}
+	
+	#devdeploy .orbit-container .orbit-next {
+		right: 30%;
+	}
+	
+	#devdeploy .orbit-container .orbit-prev > span{
+		border-right-color: #27c4f4;
+	}
+
+	#devdeploy .orbit-container .orbit-prev:hover > span {
+		border-right-color: #fff;
+	}
+	
+	#devdeploy .orbit-container .orbit-next > span{
+		border-left-color: #27c4f4;
+	}
+	
+	#devdeploy .orbit-container .orbit-next:hover > span {
+		border-left-color: #fff;
+	}
+}
+
+@media only screen and (max-width: 768px){
+    #devdeploy{
+        background-size: 750px;
+        background-position: 300px 15px;
+    }
+
+	#devdeploy .orbit-container .orbit-prev,
+	#devdeploy .orbit-container .orbit-next {
+		top: 94%;
+	}
+	
+	#devdeploy .orbit-container .orbit-prev{
+		left: 20%;
+	}
+	
+	#devdeploy .orbit-container .orbit-next {
+		right: 20%;
+	}
+}	
+
+
+/* -----------------------------------------
+   Advertising Page
+----------------------------------------- */
+#advertising .images{
+    text-align: center;
+}
+
+#advertising img{
+    max-height: 41rem;
+    border: solid 1px #ddd;
+}
+
+#advertising #kiosk-wrap{
+    position: relative;
+    top: -3rem;
+    left: -5rem;
+    max-height: 50rem;
+    z-index: 10;
+    border: none;
+}
+
+#advertising #voucher{
+    position: absolute;
+    top: 18rem;
+    left: 2rem;
+    max-width: 140%;
+    border: none;
+}
+
+/*-------------Advertising Page Responsive-------------*/
+@media only screen and (max-width: 1024px){
+	#advertising #kiosk-wrap {
+		max-height: 450px;
+	}
+
+    #advertising img{
+        max-height: 22rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #advertising #kiosk-wrap {
+        max-height: 450px;
+    }
+
+    #advertising img{
+        max-height: 37rem;
+    }
+}
+
+
+/* -----------------------------------------
+   Analytics Page
+----------------------------------------- */
+.report{
+    margin-bottom: 2rem;
+    padding: 2rem 1rem 1rem 1rem;
+    border: solid 1px #ececec;
+    text-align: center;
+}
+
+.report p{
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #222;
+}
+
+.report img{
+    margin-bottom: .5rem;
+}
+
+.report th,
+.report td{
+    padding: 0 .5rem;
+    text-align: center;
+}
+
+.report th img{
+    width: 3rem;
+    padding: .25rem;
+    border-radius: 6rem;
+}
+
+.report th:nth-of-type(2) img{
+    background: #F54E5A;
+}
+
+.report th:nth-of-type(3) img{
+    background: #FFDA59;
+}
+
+.report th:nth-of-type(4) img{
+    background: #ABD56D;
+}
+
+.report label{
+    font-family: "Raleway", sans-serif;
+    color: #777;
+}
+
+.report td h4{
+    margin-top: 1.5rem;
+}
+
+.report #graph-impressions-weekly{
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+
+#vendor-report img{
+    max-width: 70%;
+}
+
+#vendor-report li:nth-of-type(1) img{
+    border: solid 1px #bbb;
+}
+
+#vendor-report .icon{
+    padding: 1rem;
+    background: #4DD4F9;
+    border-radius: 6rem;
+}
+
+#vendor-report h4{
+    margin-bottom: 0;
+}
+
+/*-------------Analytics Page Responsive-------------*/
+@media only screen and (max-width: 1024px){
+
+}
+
+
+/* -----------------------------------------
+   Financials Page
+----------------------------------------- */
+#financials thead{
+    font-family: "Raleway", sans-serif;
+}
+
+#financials th,
+#financials td{
+    text-align: center;
+}
+
+#financials td{
+	padding: 1rem .5rem;
+    background: #fff;
+	font-size: 1em;
+}
+
+#financials th:first-child,
+#financials td:first-child{
+    background: none;
+    text-align: left;
+}
+
+#financials p{
+	margin-bottom: .5rem;
+}
+
+#financials h4:last-child,
+#financials p:last-child{
+	margin-bottom: 0;
+}
+
+/* -----------------------------------------
+   Timeline Page
+----------------------------------------- */
+#timeline .tabs-content > .content ul{
+    width: 100%;
+    margin: 0;
+}
+
+#timeline .tabs-content > .content li{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: 1rem;
+    background: #f2f2f2;
+    font-size: 1rem;
+}
+
